@@ -1,0 +1,170 @@
+:root {
+    --rojo: #E50914;
+    --fondo: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--fondo);
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+*::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+.menu {
+    background-color: #141414;
+    height: 75px;
+    text-align: center;
+    align-items: center;
+}
+
+.nombre {
+    color: #ffffff;
+    font-size: 35px;
+    padding: 0 88px;
+    font-weight: bold;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.contenedor {
+    width: 90%;
+    margin: auto;
+}
+
+header {
+    padding: 30px 0;
+}
+
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logotipo {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: var(--rojo);
+    font-size: 40px;
+}
+
+header nav a {
+    color: #AAA;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+    color: #FFF;
+}
+
+/*Final De Encabezado*/
+
+
+.div {
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: #c40000;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1700px;
+    border: 1px solid lightgray;
+    box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+    border-radius: 15px;
+    font-family: sans-serif;
+    color: aliceblue;
+    margin: auto;
+    margin-top: 40px;
+
+}
+
+.titulo {
+    font-size: 40px;
+    margin-top: 10px;
+    padding: 10px 10px 0 10px;
+
+}
+
+.imagensita {
+    width: 600px;
+    height: 600px;
+
+
+}
+
+.cuerpo {
+    display: flex;
+    font-size: 30px;
+    padding: 20px;
+    margin: auto;
+}
+
+.parraf {
+    padding: 20px;
+
+}
+
+
+.pie a {
+    text-decoration: none;
+    color: white;
+}
+
+.pie a:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: ""
+}
+
+.parrafo-about {
+    float: right;
+
+}

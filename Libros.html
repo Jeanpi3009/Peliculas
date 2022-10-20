@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Libros</title>
+  <link rel="stylesheet" href="css/EstilosLibros.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/libros.css">
+  <link rel="icon" type="image/png" href="img/Logo.png" />
+</head>
+
+<body>
+
+  <header>
+    <div class="contenedor">
+      <div class="conte_header" id="header">
+        <div class="icono_buscar">
+          <i class="bi bi-search" id="icono"><span>Buscar....</span></i>
+        </div>
+        <div>
+          <img class="img" src="img/Logo.png">
+        </div>
+        <nav>
+          <nav class="menu">
+            <label class="nombre">LIBROS</label>
+          </nav>
+					<a href="index.html" class="activo">Inicio</a>
+					<a href="Series.html" class="activo">Series</a>
+					<a href="Libros.html" class="activo">Libros</a>
+					<a href="Peliculas.html" class="activo">Peliculas</a>
+        </nav>
+      </div>
+  </header>
+  <section>
+    <div class="buscador" id="buscador">
+      <input type="text" placeholder="Buscar..." id="buscar">
+    </div>
+
+    <div class="portada_busqueda" id="portada">
+      <div class="movies" id="movies">
+        <!--- movies grid --->
+        <div class="movies-grid" id="peliculas">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <header class="header2">
+      <h1>LIBROS FAVORITOS</h1>
+    </header>
+    <article class="article2">
+      <div class="band">
+        <div class="item-1">
+          <a href="https://www.amazon.com/-/es/Neil-Gaiman/dp/8499181821" target="_blank" class="card">
+            <div class="thumb" style="background-image: url(img/libro4.jpg);"></div>
+            <article>
+              <h3>Cementerio Sin Lapidas Y Otras Historias</h3>
+              <span>Literatura fantástica 19 de junio de 2007</span>
+            </article>
+          </a>
+        </div>
+        <div class="item-2">
+          <a href="https://articulo.mercadolibre.com.co/MCO-588678658-stephen-king-it-eso-original-_JM#position=2&search_layout=stack&type=item&tracking_id=f48798c3-a556-403d-9668-f387495fe981"
+            target="_blank" class="card">
+            <div class="thumb" style="background-image: url(img/libro5.jpg);"></div>
+            <article>
+              <h3>Stephen King IT Eso</h3>
+              <span>Novela, Terror, Thriller, Fantasía oscura 15 de septiembre de 1986</span>
+            </article>
+          </a>
+        </div>
+        <div class="item-3">
+          <a href="https://librerianacional.com/producto/el-fantasma-de-la-opera-381912" target="_blank" class="card">
+            <div class="thumb" style="background-image: url(img/libro6.jpg);"></div>
+            <article>
+              <h3>Gaston Leroux E Fantasma</h3>
+              <span>2018 ‧ Suspenso/Suspenso ‧ 2h 20m</span>
+            </article>
+          </a>
+        </div>
+        <div class="item-4">
+          <a href="https://www.amazon.com/-/es/Carles-Porta-ebook/dp/B01N9KN2ZI" target="_blank" class="card">
+            <div class="thumb" style="background-image: url(img/libro7.jpg);"></div>
+            <article>
+              <h3>El Día En Que Me Fui</h3>
+              <span>7 de febrero de 2017</span>
+            </article>
+          </a>
+        </div>
+        <div class="item-5">
+          <a href="https://www.amazon.es/ladrona-libros-BEST-SELLER/dp/8499088074" target="_blank" class="card">
+            <div class="thumb" style="background-image: url(img/libro8.jpg);"></div>
+            <article>
+              <h3>La Ladrona De Libros</h3>
+              <span>2010 ‧ Bélico/Acción ‧ 1h 55m</span>
+            </article>
+          </a>
+        </div>
+        <div class="item-6">
+          <a href="https://www.buscalibre.com.co/libro-cincuenta-sombras-de-grey/9788425348839/p/5954123"
+            target="_blank" class="card">
+            <div class="thumb" style="background-image: url(img/libro9.jpg);"></div>
+            <article>
+              <h3>Cincuenta Sombras De Grey</h3>
+              <span> literatura romántico-erótica (+18)</span>
+            </article>
+          </a>
+        </div>
+        <div class="item-7">
+          <a href="https://www.amazon.com/-/es/Dr-Robert-Gale/dp/1989728189" target="_blank" class="card">
+            <div class="thumb" style="background-image: url(img/libro10.jpg);"></div>
+            <article>
+              <h3>Voces De Chernóbil</h3>
+              <span>1997</span>
+            </article>
+          </a>
+        </div>
+  </section>
+  </article>
+
+
+
+</body>
+
+</html>
+
+<script src="js/BuscadorLibros.js"></script>
+<script src="js/filtro.js"></script>
+<script src="js/js1.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>

@@ -1,0 +1,416 @@
+:root {
+	--rojo: #E50914;
+	--fondo: #141414;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--fondo);
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+.conte_header {
+	width: 90%;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	top: 0;
+	position: fixed;
+	z-index: 11;
+	background-color: #141414;
+	border-end-start-radius: 25px;
+	border-end-end-radius: 25px;
+	transition: 1s;
+}
+
+.conte_header .icono_buscar {
+	border-bottom: 2px solid #db1717;
+}
+
+.conte_header .icono_buscar span {
+	margin: 5px;
+}
+
+.titulo {
+	color: #fff;
+	font-size: 42px;
+	margin-left: 16px;
+}
+
+header .titulo:hover {
+	transition: 0.8s;
+	transform: scale(1.1);
+}
+
+.icono_buscar i {
+	margin-right: 52px;
+	font-size: 22px;
+	color: #EFF3F5;
+	cursor: pointer;
+	transition: all 300ms;
+}
+
+.icono_buscar i:hover {
+	color: #fff;
+}
+
+/* buscador oculto */
+.buscador {
+	position: absolute;
+	/* background-color: #000; */
+	/* background-color:rgba(0, 0, 0, .50); */
+	top: -14.4%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 11px;
+	width: 50%;
+	height: 10vh;
+	z-index: 1000;
+	transition: all 600ms;
+	position: fixed;
+}
+
+
+.buscador input {
+	width: 40vw;
+	height: 20px;
+	border: none;
+	border-radius: 7px;
+	padding: 9px;
+	z-index: 1000;
+	font-size: 17px;
+	background-color: #141414;
+	color: white;
+	border: 2px solid #db1717;
+}
+
+.buscador input:focus {
+	border: 4px solid #db1717;
+}
+
+.buscador input::placeholder {
+	color: white;
+}
+
+/* peliculas al momento de buscar */
+
+.portada_busqueda {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	display: none;
+	transition: all 400ms;
+	z-index: 100;
+}
+
+.movies {
+	width: 95%;
+	height: 100%;
+	/* background-color: #1783db; */
+	transform: translateY(30%);
+	margin-left: 2%;
+	color: #fff;
+}
+
+.movies-grid {
+	display: grid;
+	width: 100%;
+	/* Esta palabra clave nos ayuda a decirle al navegador que inserte el número de columnas o filas que sea necesario para rellenar el espacio.  */
+	grid-template-columns: repeat(6, 1fr);
+}
+
+
+.movie-card .card-head {
+	position: relative;
+	height: 200px;
+	width: 75%;
+	margin-left: 10%;
+	margin-bottom: 10%;
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+.card-head img {
+	width: 100%;
+	height: 100%;
+}
+
+
+.movie-card:hover .card-img {
+	transform: scale(1.1);
+}
+
+.movie-card .card-overlay {
+	position: absolute;
+	inset: 0;
+	opacity: 0;
+	/* permite dar el desenfoque */
+	backdrop-filter: blur(15px);
+}
+
+
+.movie-card:hover .card-overlay {
+	opacity: 1;
+}
+
+.movie-card .bookmark,
+.movie-card .rating {
+	position: absolute;
+	top: 15px;
+	padding: 7px;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 22px;
+}
+
+.movie-card .bookmark {
+	background: #000;
+	left: 15px;
+	font-size: 22px;
+}
+
+.movie-card .rating {
+	display: flex;
+	right: 15px;
+	background: #000;
+}
+
+.movie-card .rating span {
+	color: #fff;
+	font-size: 20px;
+	font-weight: 7000;
+	margin-left: 5px;
+}
+
+.movie-card i {
+	font-size: 20px;
+	display: block;
+	color: #fff;
+}
+
+.movie-card .play i {
+	position: absolute;
+	font-size: 56px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.movie-card .play {
+	font-size: 60px;
+}
+
+.card-title {
+	font-size: 19px;
+	font-weight: 700;
+	margin-bottom: 10px;
+	width: 150px;
+	margin-left: 10%;
+}
+
+.card-info {
+	font-size: 16px;
+	font-weight: 5000;
+	display: block;
+	margin-left: 10%;
+	margin-bottom: 10%;
+}
+
+.error {
+	width: 95vw;
+	height: 100px;
+	text-align: center;
+	font-size: 30px;
+}
+
+.error i {
+	font-size: 56px;
+	color: #fff;
+}
+
+.error h3 {
+	margin-top: 10px;
+}
+
+
+.buscar {
+	position: relative;
+	padding: 5px;
+}
+
+.buscar input {
+	width: 0;
+	height: 40px;
+	padding: 0 20px;
+	font-size: 18px;
+	color: #fff;
+	outline: none;
+	border: 1px solid silver;
+	border-radius: 30px;
+	transition: all 0.6s ease;
+}
+
+.btn {
+	width: 55px;
+	height: 55px;
+	line-height: 55px;
+	top: 0;
+	right: 0;
+	position: absolute;
+	background: #E50914;
+	text-align: center;
+	color: white;
+	font-size: 18px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.buscar:hover input {
+	width: 240px;
+}
+
+.buscar input:focus {
+	width: 240px;
+}
+
+*::after {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+
+.menu {
+	background-color: #141414;
+	height: 75px;
+	text-align: center;
+	align-items: center;
+}
+
+.nombre {
+	color: #ffffff;
+	font-size: 35px;
+	padding: 0 88px;
+	font-weight: bold;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+
+}
+
+.img {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+header {
+	padding: 30px 0;
+}
+
+header .contenedor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--rojo);
+	font-size: 40px;
+}
+
+header nav a {
+	color: #AAA;
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+	color: #FFF;
+}
+
+/*Final De Encabezado*/
+
+.div{ 
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: #f4f4f4; 
+    flex-direction: column;
+    display: flex; 
+    align-items: center;
+}
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+
+}
+.img{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+}
+
+#searchbar{
+    margin-left: 15%;
+    padding:15px;
+    border-radius: 10px;
+  }
+
+  input[type=text] {
+     width: 30%;
+     -webkit-transition: width 0.15s ease-in-out;
+     transition: width 0.15s ease-in-out;
+  }
+
+  /* When the input field gets focus,
+       change its width to 100% */
+  input[type=text]:focus {
+    width: 70%;
+  }
+
+ #list{
+   font-size:  1.5em;
+   margin-left: 90px;
+  }
+
+.filtrar{
+  display: list-item;    
+ } 
+
+.image4{
+    width: 30px;
+    height: 40px;
+}
+.listaarticulos{
+    font-size: 30px;
+    margin-top: 20px;
+    list-style: none;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+}
+.li{
+    margin: 5px 0;
+}

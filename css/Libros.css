@@ -1,0 +1,150 @@
+section{
+    padding: 35px;
+    text-align: center;
+}
+html {
+	font-family: 'Roboto', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	padding: 20px 0;
+  }
+  
+  .band {
+	width: 90%;
+	max-width: 1240px;
+	margin: 0 auto;
+	
+	display: grid;
+	
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-gap: 20px;
+	
+  }
+  
+  @media only screen and (min-width: 500px) {
+	.band {
+	  grid-template-columns: 1fr 1fr;
+	}  
+	.item-1 {
+	grid-column: 1/ span 2;
+	}
+	.item-1 h1 {
+	  font-size: 30px;
+	}
+  }
+  
+  @media only screen and (min-width: 850px) {
+	.band {
+	  grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+  }
+  
+  /* card */
+  
+  .card {
+	min-height: 100%;
+	background: rgb(255, 255, 255);
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	display: flex;
+	flex-direction: column;
+	text-decoration: none;
+	color: rgb(0,0,0,0.1);
+	position: relative;
+	top: 0;
+	transition: all .1s ease-in;
+  }
+  
+  .card:hover {
+	top: -2px;
+	box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+  }
+  
+  .card article {
+	padding: 20px;
+	display: flex;
+	
+	flex: 1;
+	justify-content: space-between;
+	flex-direction: column;
+	
+  }
+  .card .thumb {
+	padding-bottom: 60%;
+	background-size: cover;
+	background-position: center center;
+  }
+  
+  .card p { 
+	flex: 1; /* make p grow to fill available space*/
+	line-height: 1.4;
+  }
+  
+  /* typography */
+  h3 {
+	font-size: 20px;
+	margin: 0;
+	color: #000;
+  }
+  
+  .card span {
+	font-size: 12px;
+	font-weight: bold;
+	color: #999;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	margin: 2em 0 0 0;
+  }
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width:992px) {
+
+	.gallery {
+		width: auto;
+	}
+
+}
+
+@media screen and (max-width:768px) {
+
+	.gallery li {
+		width: 50%;
+	}
+
+}
+
+@media screen and (max-width:468px) {
+
+	.gallery li {
+		width: 100%;
+	}
+
+}
+
+.header2 {
+    display: flex;
+    justify-content: space-between;
+    color: aliceblue;
+    margin: 0 auto;
+    margin-top: 10px;
+    position: relative;
+    font-weight: bold;
+    text-align: center;
+    max-width: 100vw;
+}
+
+.header2 {
+    background: #E50914;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.article2 {
+    color: aliceblue;
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+    background: #141414;
+    padding: 10px;
+}

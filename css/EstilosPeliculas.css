@@ -1,0 +1,1297 @@
+:root {
+	--rojo: #E50914;
+	--fondo: #141414;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--fondo);
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+.conte_header {
+	width: 90%;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	top: 0;
+	position: fixed;
+	z-index: 11;
+	background-color: #141414;
+	border-end-start-radius: 25px;
+	border-end-end-radius: 25px;
+	transition: 1s;
+}
+
+.conte_header .icono_buscar {
+	border-bottom: 2px solid #db1717;
+}
+
+.conte_header .icono_buscar span {
+	margin: 5px;
+}
+
+.titulo {
+	color: #fff;
+	font-size: 42px;
+	margin-left: 16px;
+}
+
+header .titulo:hover {
+	transition: 0.8s;
+	transform: scale(1.1);
+}
+
+.icono_buscar i {
+	margin-right: 52px;
+	font-size: 22px;
+	color: #EFF3F5;
+	cursor: pointer;
+	transition: all 300ms;
+}
+
+.icono_buscar i:hover {
+	color: #fff;
+}
+
+/* buscador oculto */
+.buscador {
+	position: absolute;
+	/* background-color: #000; */
+	/* background-color:rgba(0, 0, 0, .50); */
+	top: -14.4%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 11px;
+	width: 50%;
+	height: 10vh;
+	z-index: 1000;
+	transition: all 600ms;
+	position: fixed;
+}
+
+
+.buscador input {
+	width: 40vw;
+	height: 20px;
+	border: none;
+	border-radius: 7px;
+	padding: 9px;
+	z-index: 1000;
+	font-size: 17px;
+	background-color: #141414;
+	color: white;
+	border: 2px solid #db1717;
+}
+
+.buscador input:focus {
+	border: 4px solid #db1717;
+}
+
+.buscador input::placeholder {
+	color: white;
+}
+
+/* peliculas al momento de buscar */
+
+.portada_busqueda {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	display: none;
+	transition: all 400ms;
+	z-index: 100;
+}
+
+.movies {
+	width: 95%;
+	height: 100%;
+	/* background-color: #1783db; */
+	transform: translateY(30%);
+	margin-left: 2%;
+	color: #fff;
+}
+
+.movies-grid {
+	display: grid;
+	width: 100%;
+	/* Esta palabra clave nos ayuda a decirle al navegador que inserte el número de columnas o filas que sea necesario para rellenar el espacio.  */
+	grid-template-columns: repeat(6, 1fr);
+}
+
+
+.movie-card .card-head {
+	position: relative;
+	height: 200px;
+	width: 75%;
+	margin-left: 10%;
+	margin-bottom: 10%;
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+.card-head img {
+	width: 100%;
+	height: 100%;
+}
+
+
+.movie-card:hover .card-img {
+	transform: scale(1.1);
+}
+
+.movie-card .card-overlay {
+	position: absolute;
+	inset: 0;
+	opacity: 0;
+	/* permite dar el desenfoque */
+	backdrop-filter: blur(15px);
+}
+
+
+.movie-card:hover .card-overlay {
+	opacity: 1;
+}
+
+.movie-card .bookmark,
+.movie-card .rating {
+	position: absolute;
+	top: 15px;
+	padding: 7px;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 22px;
+}
+
+.movie-card .bookmark {
+	background: #000;
+	left: 15px;
+	font-size: 22px;
+}
+
+.movie-card .rating {
+	display: flex;
+	right: 15px;
+	background: #000;
+}
+
+.movie-card .rating span {
+	color: #fff;
+	font-size: 20px;
+	font-weight: 7000;
+	margin-left: 5px;
+}
+
+.movie-card i {
+	font-size: 20px;
+	display: block;
+	color: #fff;
+}
+
+.movie-card .play i {
+	position: absolute;
+	font-size: 56px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.movie-card .play {
+	font-size: 60px;
+}
+
+.card-title {
+	font-size: 19px;
+	font-weight: 700;
+	margin-bottom: 10px;
+	width: 150px;
+	margin-left: 10%;
+}
+
+.card-info {
+	font-size: 16px;
+	font-weight: 5000;
+	display: block;
+	margin-left: 10%;
+	margin-bottom: 10%;
+}
+
+.error {
+	width: 95vw;
+	height: 100px;
+	text-align: center;
+	font-size: 30px;
+}
+
+.error i {
+	font-size: 56px;
+	color: #fff;
+}
+
+.error h3 {
+	margin-top: 10px;
+}
+
+
+.buscar {
+	position: relative;
+	padding: 5px;
+}
+
+.buscar input {
+	width: 0;
+	height: 40px;
+	padding: 0 20px;
+	font-size: 18px;
+	color: #222;
+	outline: none;
+	border: 1px solid silver;
+	border-radius: 30px;
+	transition: all 0.6s ease;
+}
+
+.btn {
+	width: 55px;
+	height: 55px;
+	line-height: 55px;
+	top: 0;
+	right: 0;
+	position: absolute;
+	background: #E50914;
+	text-align: center;
+	color: white;
+	font-size: 18px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.buscar:hover input {
+	width: 240px;
+}
+
+.buscar input:focus {
+	width: 240px;
+}
+
+*::after {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+
+.menu {
+	background-color: #141414;
+	height: 75px;
+	text-align: center;
+	align-items: center;
+}
+
+.nombre {
+	color: #ffffff;
+	font-size: 35px;
+	padding: 0 88px;
+	font-weight: bold;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+
+}
+
+.img {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+header {
+	padding: 30px 0;
+}
+
+header .contenedor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--rojo);
+	font-size: 40px;
+}
+
+header nav a {
+	color: #AAA;
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+	color: #FFF;
+}
+
+/* ---- ----- ----- Pelicula Principal ----- ----- ----- */
+.pelicula-principal {
+	font-size: 16px;
+	min-height: 40.62em;
+	color: #fff;
+	background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 100%), url(../img/backdrop.jpg);
+	background-position: center center;
+	background-size: cover;
+	margin-bottom: 3.12em;
+	display: flex;
+	align-items: end;
+}
+
+.pelicula-principal .contenedor {
+	margin: 0 auto;
+	margin-bottom: 6.25em;
+}
+
+.pelicula-principal .titulo {
+	font-weight: 600;
+	font-size: 3.12em;
+	margin-bottom: 0.4em;
+}
+
+.pelicula-principal .descripcion {
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.75em;
+	max-width: 50%;
+	margin-bottom: 1.25em;
+
+}
+
+.pelicula-principal .boton {
+	background: #000;
+	border: none;
+	text-decoration: #000;
+	border-radius: 0.31em;
+	padding: 0.93em 1.87em;
+	color: #fff;
+	margin-right: 1.25em;
+	cursor: pointer;
+	transition: .3s ease all;
+	font-size: 1.12em;
+}
+
+.pelicula-principal .boton:hover {
+	background-color: #fff;
+	display: flex;
+	list-style: none;
+	margin-right: 30px;
+	color: #fff;
+}
+
+.pelicula-principal .boton i {
+	margin-right: 1.25em;
+	text-decoration: #000;
+}
+
+/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
+.contenedor-titulo-controles {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.contenedor-titulo-controles h3 {
+	color: #fff;
+	font-size: 30px;
+}
+
+.contenedor-titulo-controles .indicadores button {
+	background: #fff;
+	height: 3px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+	background: red;
+}
+
+
+
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+.peliculas-recomendadas {
+	margin-bottom: 70px;
+}
+
+.peliculas-recomendadas .contenedor-principal {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(0, 0, 0, 0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
+	background: rgba(0, 0, 0, .9);
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda {
+	left: 0;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel Principal ----- ----- ----- */
+.peliculas-recomendadas .contenedor-accion {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-accion .accion {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-accion .accion .pelicula1 {
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+
+.peliculas-recomendadas .contenedor-accion .accion .pelicula1 .hover {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-accion .accion .pelicula1 img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/* ---- ----- ----- Media Queries Pricipal ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.pelicula1-principal {
+		font-size: 14px;
+	}
+
+	.pelicula1-principal .descripcion {
+		max-width: 100%;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel {
+		overflow: visible;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel .carousel {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.peliculas-recomendadas .indicadores,
+	.peliculas-recomendadas .flecha-izquierda,
+	.peliculas-recomendadas .flecha-derecha {
+		display: none;
+	}
+}
+
+
+/* ---- ----- ----- Contenedor Secundario y Flechas ----- ----- ----- */
+.peliculas-recomendadas {
+	margin-bottom: 70px;
+}
+
+.peliculas-recomendadas .contenedor-secundario {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.peliculas-recomendadas .contenedor-secundario .flecha-izquierda,
+.peliculas-recomendadas .contenedor-secundario .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(0, 0, 0, 0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-secundario .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-secundario .flecha-derecha:hover {
+	background: rgba(0, 0, 0, .9);
+}
+
+.peliculas-recomendadas .contenedor-secundario .flecha-izquierda {
+	left: 0;
+}
+
+.peliculas-recomendadas .contenedor-secundario .flecha-derecha {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel Secundario----- ----- ----- */
+.peliculas-recomendadas .contenedor-CienciaFiccion {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-CienciaFiccion .CienciaFiccion {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-CienciaFiccion .CienciaFiccion .pelicula2 {
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+
+.peliculas-recomendadas .contenedor-CienciaFiccion .CienciaFiccion .pelicula2.hover {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-CienciaFiccion .CienciaFiccion .pelicula2 img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/* ---- ----- ----- Media Queries Secundario ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.pelicula2-secundario {
+		font-size: 14px;
+	}
+
+	.pelicula2-secundario .descripcion {
+		max-width: 100%;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel {
+		overflow: visible;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel .carousel {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.peliculas-recomendadas .indicadores,
+	.peliculas-recomendadas .flecha-izquierda,
+	.peliculas-recomendadas .flecha-derecha {
+		display: none;
+	}
+}
+
+
+/* ---- ----- ----- Contenedor Tercero y Flechas ----- ----- ----- */
+.peliculas-recomendadas {
+	margin-bottom: 70px;
+}
+
+.peliculas-recomendadas .contenedor-tercero {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.peliculas-recomendadas .contenedor-tercero .flecha-izquierda,
+.peliculas-recomendadas .contenedor-tercero .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(0, 0, 0, 0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-tercero .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-tercero .flecha-derecha:hover {
+	background: rgba(0, 0, 0, .9);
+}
+
+.peliculas-recomendadas .contenedor-tercero .flecha-izquierda {
+	left: 0;
+}
+
+.peliculas-recomendadas .contenedor-tercero .flecha-derecha {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel Tercero----- ----- ----- */
+.peliculas-recomendadas .contenedor-belico {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-belico .belico {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-belico .belico .pelicula3 {
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+
+.peliculas-recomendadas .contenedor-belico .belico .pelicula3.hover {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-belico .belico .pelicula3 img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/* ---- ----- ----- Media Queries Tercero ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.pelicula3-tercero {
+		font-size: 14px;
+	}
+
+	.pelicula3-tercero .descripcion {
+		max-width: 100%;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel {
+		overflow: visible;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel .carousel {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.peliculas-recomendadas .indicadores,
+	.peliculas-recomendadas .flecha-izquierda,
+	.peliculas-recomendadas .flecha-derecha {
+		display: none;
+	}
+}
+
+
+/* ---- ----- ----- Contenedor Cuarto y Flechas ----- ----- ----- */
+.peliculas-recomendadas {
+	margin-bottom: 70px;
+}
+
+.peliculas-recomendadas .contenedor-cuarto {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.peliculas-recomendadas .contenedor-cuarto .flecha-izquierda,
+.peliculas-recomendadas .contenedor-cuarto .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(0, 0, 0, 0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-cuarto .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-cuarto .flecha-derecha:hover {
+	background: rgba(0, 0, 0, .9);
+}
+
+.peliculas-recomendadas .contenedor-cuarto .flecha-izquierda {
+	left: 0;
+}
+
+.peliculas-recomendadas .contenedor-cuarto .flecha-derecha {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel Cuarto----- ----- ----- */
+.peliculas-recomendadas .contenedor-romantico {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-romantico .romantico {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-romantico .romantico .pelicula4 {
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+
+.peliculas-recomendadas .contenedor-romantico .romantico .pelicula4.hover {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-romantico .romantico .pelicula4 img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/* ---- ----- ----- Media Queries cuarto ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.pelicula4-romantico {
+		font-size: 14px;
+	}
+
+	.pelicula4-romantico .descripcion {
+		max-width: 100%;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel {
+		overflow: visible;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel .carousel {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.peliculas-recomendadas .indicadores,
+	.peliculas-recomendadas .flecha-izquierda,
+	.peliculas-recomendadas .flecha-derecha {
+		display: none;
+	}
+}
+
+
+/* ---- ----- ----- Contenedor Quinto y Flechas ----- ----- ----- */
+.peliculas-recomendadas {
+	margin-bottom: 70px;
+}
+
+.peliculas-recomendadas .contenedor-quinto {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.peliculas-recomendadas .contenedor-quinto .flecha-izquierda,
+.peliculas-recomendadas .contenedor-quinto .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(0, 0, 0, 0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-quinto .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-quinto .flecha-derecha:hover {
+	background: rgba(0, 0, 0, .9);
+}
+
+.peliculas-recomendadas .contenedor-quinto .flecha-izquierda {
+	left: 0;
+}
+
+.peliculas-recomendadas .contenedor-quinto .flecha-derecha {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel quinto ----- ----- ----- */
+.peliculas-recomendadas .contenedor-infantil {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-infantil .infantil {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-infantil .infantil .pelicula5 {
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+
+.peliculas-recomendadas .contenedor-infantil .infantil .pelicula5.hover {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-infantil .infantil .pelicula5 img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/* ---- ----- ----- Media Queries quinto ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.pelicula5-infantil {
+		font-size: 14px;
+	}
+
+	.pelicula5-infantil .descripcion {
+		max-width: 100%;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel {
+		overflow: visible;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel .carousel {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.peliculas-recomendadas .indicadores,
+	.peliculas-recomendadas .flecha-izquierda,
+	.peliculas-recomendadas .flecha-derecha {
+		display: none;
+	}
+}
+
+
+/* ---- ----- ----- Contenedor sexto y Flechas ----- ----- ----- */
+.peliculas-recomendadas {
+	margin-bottom: 70px;
+}
+
+.peliculas-recomendadas .contenedor-sexto {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.peliculas-recomendadas .contenedor-sexto .flecha-izquierda,
+.peliculas-recomendadas .contenedor-sexto .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(0, 0, 0, 0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-sexto .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-sexto .flecha-derecha:hover {
+	background: rgba(0, 0, 0, .9);
+}
+
+.peliculas-recomendadas .contenedor-sexto .flecha-izquierda {
+	left: 0;
+}
+
+.peliculas-recomendadas .contenedor-sexto .flecha-derecha {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel sexto----- ----- ----- */
+.peliculas-recomendadas .contenedor-terror {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-terror .terror {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-terror .terror .pelicula6 {
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+
+.peliculas-recomendadas .contenedor-terror .terror .pelicula6.hover {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-terror .terror .pelicula6 img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/* ---- ----- ----- Media Queries sexto ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.pelicula6-sexto {
+		font-size: 14px;
+	}
+
+	.pelicula6-sexto .descripcion {
+		max-width: 100%;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel {
+		overflow: visible;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel .carousel {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.peliculas-recomendadas .indicadores,
+	.peliculas-recomendadas .flecha-izquierda,
+	.peliculas-recomendadas .flecha-derecha {
+		display: none;
+	}
+}
+
+
+/* ---- ----- ----- Contenedor septimo y Flechas ----- ----- ----- */
+.peliculas-recomendadas {
+	margin-bottom: 70px;
+}
+
+.peliculas-recomendadas .contenedor-septimo {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.peliculas-recomendadas .contenedor-septimo .flecha-izquierda,
+.peliculas-recomendadas .contenedor-septimo .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(0, 0, 0, 0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-septimo .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-septimo .flecha-derecha:hover {
+	background: rgba(0, 0, 0, .9);
+}
+
+.peliculas-recomendadas .contenedor-septimo .flecha-izquierda {
+	left: 0;
+}
+
+.peliculas-recomendadas .contenedor-septimo .flecha-derecha {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel septimo----- ----- ----- */
+.peliculas-recomendadas .contenedor-suspenso {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-suspenso .suspenso {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-suspenso .suspenso .pelicula7 {
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+
+.peliculas-recomendadas .contenedor-suspenso .suspenso .pelicula7.hover {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-suspenso .suspenso .pelicula7 img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/* ---- ----- ----- Media Queries septimo ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.pelicula7-septimo {
+		font-size: 14px;
+	}
+
+	.pelicula7-septimo .descripcion {
+		max-width: 100%;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel {
+		overflow: visible;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel .carousel {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.peliculas-recomendadas .indicadores,
+	.peliculas-recomendadas .flecha-izquierda,
+	.peliculas-recomendadas .flecha-derecha {
+		display: none;
+	}
+}
+
+
+/* ---- ----- ----- Contenedor octavo y Flechas ----- ----- ----- */
+.peliculas-recomendadas {
+	margin-bottom: 70px;
+}
+
+.peliculas-recomendadas .contenedor-octavo {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.peliculas-recomendadas .contenedor-octavo .flecha-izquierda,
+.peliculas-recomendadas .contenedor-octavo .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(0, 0, 0, 0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-octavo .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-octavo .flecha-derecha:hover {
+	background: rgba(0, 0, 0, .9);
+}
+
+.peliculas-recomendadas .contenedor-octavo .flecha-izquierda {
+	left: 0;
+}
+
+.peliculas-recomendadas .contenedor-octavo .flecha-derecha {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel octavo----- ----- ----- */
+.peliculas-recomendadas .contenedor-comedia {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-comedia .comedia {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-comedia .comedia .pelicula8 {
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+
+.peliculas-recomendadas .contenedor-comedia .comedia .pelicula8.hover {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-comedia .comedia .pelicula8 img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/* ---- ----- ----- Media Queries octavo ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.pelicula8-octavo {
+		font-size: 14px;
+	}
+
+	.pelicula8-octavo .descripcion {
+		max-width: 100%;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel {
+		overflow: visible;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel .carousel {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.peliculas-recomendadas .indicadores,
+	.peliculas-recomendadas .flecha-izquierda,
+	.peliculas-recomendadas .flecha-derecha {
+		display: none;
+	}
+}
+
+.card {
+	text-decoration: none;
+}

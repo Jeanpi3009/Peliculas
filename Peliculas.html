@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/EstilosPeliculas.css">
+	<link rel="stylesheet" href="css/BuscadorPeliculas.css">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+		rel="stylesheet">
+	<title>Películas</title>
+	<link rel="icon" type="image/png" href="img/Logo.png" />
+</head>
+
+<body>
+	<header>
+		<div class="contenedor">
+			<div class="conte_header" id="header">
+				<div class="icono_buscar">
+					<i class="bi bi-search" id="icono"><span>Buscar....</span></i>
+				</div>
+				<div>
+					<img class="img" src="img/Logo.png">
+				</div>
+				<nav>
+					<nav class="menu">
+						<label class="nombre">PELICULAS</label>
+					</nav>
+					<a href="index.html" class="activo">Inicio</a>
+					<a href="Series.html" class="activo">Series</a>
+					<a href="Libros.html" class="activo">Libros</a>
+					<a href="Peliculas.html" class="activo">Peliculas</a>
+				</nav>
+			</div>
+	</header>
+	<section>
+		<div class="buscador" id="buscador">
+			<input type="text" placeholder="Buscar..." id="buscar">
+		</div>
+
+		<div class="portada_busqueda" id="portada">
+			<div class="movies" id="movies">
+				<!--- movies grid --->
+				<div class="movies-grid" id="peliculas">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<main>
+		<div class="pelicula-principal">
+			<div class="contenedor">
+				<h3 class="titulo">Jurassic World: Dominion</h3>
+				<p class="descripcion">
+					Jurassic World: Dominion​ es una película estadounidense de 2022 de ciencia ficción y aventuras que
+					se estrenó el 1 de junio de 2022 en México, y el 11 de junio de 2022 en Estados Unidos. Es una
+					secuela de la película Jurassic World: el reino caído.
+				</p>
+				<button role="button" class="boton"><i class="fas fa-play"><a href="https://youtu.be/9m9yRauMJIQ"
+							target="_blank" class="card"></i>Reproducir</a></button>
+				<button role="button" class="boton"><i class="fas fa-info-circle"><a
+							href="https://www.universalpictures-latam.com/micro/jurassic-world-dominion" target="_blank"
+							class="card"></i>Más información</a></button>
+			</div>
+		</div>
+
+
+		<div class="peliculas-recomendadas contenedor">
+			<div class="contenedor-titulo-controles">
+				<h3>Acción</h3>
+				<div class="indicadores1"></div>
+			</div>
+
+			<div class="contenedor-principal">
+				<button role="button" id="flecha-izquierda1" class="flecha-izquierda1"><i
+						class="fas fa-angle-left"></i></button>
+
+				<div class="contenedor-accion">
+					<div class="accion">
+						<div class="pelicula1 Top Gun: Maverick">
+							<a href="https://youtu.be/zzBIzYmxatU" target="_blank" class="card"><img src="img/AC1.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula1">
+							<a href="https://youtu.be/BmllggGO4pM" target="_blank" class="card"><img src="img/AC2.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula1">
+							<a href="https://youtu.be/r6t0czGbuGI" target="_blank" class="card"><img src="img/AC3.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula1">
+							<a href="https://youtu.be/50s-JEK_XQM" target="_blank" class="card"><img src="img/AC4.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula1">
+							<a href="https://youtu.be/D7E942Cw4Ak" target="_blank" class="card"><img src="img/AC5.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula1">
+							<a href="https://youtu.be/t3DpuQrBivU" target="_blank" class="card"><img src="img/AC6.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula1">
+							<a href="https://youtu.be/3_lWvRyXOsY" target="_blank" class="card"><img src="img/AC7.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula1">
+							<a href="https://youtu.be/3oV6ZSqhzKI" target="_blank" class="card"><img src="img/AC8.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula1">
+							<a href="https://youtu.be/3q-i4a7AtT0" target="_blank" class="card"><img src="img/AC9.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula1">
+							<a href="https://youtu.be/KREBGtEeW9U" target="_blank" class="card"><img src="img/AC10.png"
+									alt=""></a>
+						</div>
+					</div>
+				</div>
+				<button role="button" id="flecha-derecha1" class="flecha-derecha1"><i
+						class="fas fa-angle-right"></i></button>
+			</div>
+		</div>
+
+
+		<div class="peliculas-recomendadas contenedor">
+			<div class="contenedor-titulo-controles">
+				<h3>Ciencia Ficción</h3>
+				<div class="indicadores2"></div>
+			</div>
+
+			<div class="contenedor-secundario">
+				<button role="button" id="flecha-izquierda2" class="flecha-izquierda2"><i
+						class="fas fa-angle-left"></i></button>
+
+				<div class="contenedor-CienciaFiccion">
+					<div class="CienciaFiccion">
+						<div class="pelicula2">
+							<a href="https://youtu.be/yNXfOOL8824" target="_blank" class="card"><img src="img/CF1.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula2">
+							<a href="https://youtu.be/n1CUHjrc9Sc" target="_blank" class="card"><img src="img/CF2.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula2">
+							<a href="https://youtu.be/YqEJ0jpFvSU" target="_blank" class="card"><img src="img/CF3.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula2">
+							<a href="https://youtu.be/DywnxIuPtUs" target="_blank" class="card"><img src="img/CF4.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula2">
+							<a href="https://youtu.be/qdIuXCfUKM8" target="_blank" class="card"><img src="img/CF5.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula2">
+							<a href="https://youtu.be/-ul1pef501M" target="_blank" class="card"><img src="img/CF6.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula2">
+							<a href="https://youtu.be/6ZfuNTqbHE8" target="_blank" class="card"><img src="img/CF7.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula2">
+							<a href="https://youtu.be/_sQSHZ65fPI" target="_blank" class="card"><img src="img/CF8.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula2">
+							<a href="https://youtu.be/JK-wAfAvJ0g" target="_blank" class="card"><img src="img/CF9.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula2">
+							<a href="https://youtu.be/xr3hPFJAHO4" target="_blank" class="card"><img src="img/CF10.png"
+									alt=""></a>
+						</div>
+					</div>
+				</div>
+				<button role="button" id="flecha-derecha2" class="flecha-derecha2"><i
+						class="fas fa-angle-right"></i></button>
+			</div>
+		</div>
+
+
+		<div class="peliculas-recomendadas contenedor">
+			<div class="contenedor-titulo-controles">
+				<h3>Bélico</h3>
+				<div class="indicadores3"></div>
+			</div>
+
+			<div class="contenedor-tercero">
+				<button role="button" id="flecha-izquierda3" class="flecha-izquierda3"><i
+						class="fas fa-angle-left"></i></button>
+
+				<div class="contenedor-belico">
+					<div class="belico">
+						<div class="pelicula3">
+							<a href="https://youtu.be/YrbdN5zaouU" target="_blank" class="card"><img src="img/BC1.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula3">
+							<a href="https://youtu.be/aYw8gwkgQ3A" target="_blank" class="card"><img src="img/BC2.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula3">
+							<a href="https://youtu.be/M5n_PyuGUUs" target="_blank" class="card"><img src="img/BC3.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula3">
+							<a href="https://youtu.be/XzLnoR4YHME" target="_blank" class="card"><img src="img/BC4.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula3">
+							<a href="https://youtu.be/QJUsNs7tLFA" target="_blank" class="card"><img src="img/BC5.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula3">
+							<a href="https://youtu.be/Z9zZUlvGGD0" target="_blank" class="card"><img src="img/BC6.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula3">
+							<a href="https://youtu.be/DNHuK1rteF4" target="_blank" class="card"><img src="img/BC7.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula3">
+							<a href="https://youtu.be/XNupATI9P0Q" target="_blank" class="card"><img src="img/BC8.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula3">
+							<a href="https://youtu.be/GNWmrUVknzU" target="_blank" class="card"><img src="img/BC9.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula3">
+							<a href="https://youtu.be/2Jj1_bhJ__k" target="_blank" class="card"><img src="img/BC10.png"
+									alt=""></a>
+						</div>
+					</div>
+				</div>
+				<button role="button" id="flecha-derecha3" class="flecha-derecha3"><i
+						class="fas fa-angle-right"></i></button>
+			</div>
+		</div>
+
+
+		<div class="peliculas-recomendadas contenedor">
+			<div class="contenedor-titulo-controles">
+				<h3>Romántico</h3>
+				<div class="indicadores4"></div>
+			</div>
+
+			<div class="contenedor-cuarto">
+				<button role="button" id="flecha-izquierda4" class="flecha-izquierda4"><i
+						class="fas fa-angle-left"></i></button>
+
+				<div class="contenedor-romantico">
+					<div class="romantico">
+						<div class="pelicula4">
+							<a href="https://youtu.be/sbNbeSCQfX8" target="_blank" class="card"><img src="img/RM1.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula4">
+							<a href="https://youtu.be/speZejQwBQo" target="_blank" class="card"><img src="img/RM2.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula4">
+							<a href="https://youtu.be/2kzxPG4cz2g" target="_blank" class="card"><img src="img/RM3.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula4">
+							<a href="https://youtu.be/oZGW7oWbLIY" target="_blank" class="card"><img src="img/RM4.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula4">
+							<a href="https://youtu.be/u5n14okxgy4" target="_blank" class="card"><img src="img/RM5.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula4">
+							<a href="https://youtu.be/3N1jJqJ9Ziw" target="_blank" class="card"><img src="img/RM6.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula4">
+							<a href="https://youtu.be/ibjAgqsgQzc" target="_blank" class="card"><img src="img/RM7.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula4">
+							<a href="https://youtu.be/3zjxECCWwrU" target="_blank" class="card"><img src="img/RM8.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula4">
+							<a href="https://youtu.be/l-s3xpv0Q0U" target="_blank" class="card"><img src="img/RM9.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula4">
+							<a href="https://youtu.be/FRrc2X4Uzm4" target="_blank" class="card"><img src="img/RM10.png"
+									alt=""></a>
+						</div>
+					</div>
+				</div>
+				<button role="button" id="flecha-derecha4" class="flecha-derecha4"><i
+						class="fas fa-angle-right"></i></button>
+			</div>
+		</div>
+
+
+		<div class="peliculas-recomendadas contenedor">
+			<div class="contenedor-titulo-controles">
+				<h3>Infantil</h3>
+				<div class="indicadores5"></div>
+			</div>
+
+			<div class="contenedor-quinto">
+				<button role="button" id="flecha-izquierda5" class="flecha-izquierda5"><i
+						class="fas fa-angle-left"></i></button>
+
+				<div class="contenedor-infantil">
+					<div class="infantil">
+						<div class="pelicula5">
+							<a href="https://youtu.be/qyYvtl6mttc" target="_blank" class="card"><img src="img/IF1.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula5">
+							<a href="https://youtu.be/zUC2tcKYmEY" target="_blank" class="card"><img src="img/IF2.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula5">
+							<a href="https://youtu.be/ZBWOEjInUYs" target="_blank" class="card"><img src="img/IF3.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula5">
+							<a href="https://youtu.be/4_0PtQmw5q8" target="_blank" class="card"><img src="img/IF4.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula5">
+							<a href="https://youtu.be/9R6-rebEo_o" target="_blank" class="card"><img src="img/IF5.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula5">
+							<a href="https://youtu.be/JHxhTOxX_bs" target="_blank" class="card"><img src="img/IF6.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula5">
+							<a href="https://youtu.be/WikwAJ3NQew" target="_blank" class="card"><img src="img/IF7.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula5">
+							<a href="https://youtu.be/CZ1CATNbXg0" target="_blank" class="card"><img src="img/IF8.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula5">
+							<a href="https://youtu.be/NgsQ8mVkN8w" target="_blank" class="card"><img src="img/IF9.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula5">
+							<a href="https://youtu.be/ORFWdXl_zJ4" target="_blank" class="card"><img src="img/IF10.png"
+									alt=""></a>
+						</div>
+					</div>
+				</div>
+				<button role="button" id="flecha-derecha5" class="flecha-derecha5"><i
+						class="fas fa-angle-right"></i></button>
+			</div>
+		</div>
+
+
+		<div class="peliculas-recomendadas contenedor">
+			<div class="contenedor-titulo-controles">
+				<h3>Terror</h3>
+				<div class="indicadores6"></div>
+			</div>
+
+			<div class="contenedor-sexto">
+				<button role="button" id="flecha-izquierda6" class="flecha-izquierda6"><i
+						class="fas fa-angle-left"></i></button>
+
+				<div class="contenedor-terror">
+					<div class="terror">
+						<div class="pelicula6">
+							<a href="https://youtu.be/6h37JM2cvsY" target="_blank" class="card"><img src="img/TR1.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula6">
+							<a href="https://youtu.be/3YZikrq0K1U" target="_blank" class="card"><img src="img/TR2.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula6">
+							<a href="https://youtu.be/X-tg05cAVwE" target="_blank" class="card"><img src="img/TR3.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula6">
+							<a href="https://youtu.be/fP4BBZ76DGg" target="_blank" class="card"><img src="img/TR4.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula6">
+							<a href="https://youtu.be/3s3vBKnPa9k" target="_blank" class="card"><img src="img/TR5.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula6">
+							<a href="https://youtu.be/M0T0EPJIg7A" target="_blank" class="card"><img src="img/TR6.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula6">
+							<a href="https://youtu.be/roKEPJJRqVk" target="_blank" class="card"><img src="img/TR7.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula6">
+							<a href="https://youtu.be/6FRmOZbPPXI" target="_blank" class="card"><img src="img/TR8.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula6">
+							<a href="https://youtu.be/I5GieEmEmFY" target="_blank" class="card"><img src="img/TR9.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula6">
+							<a href="https://youtu.be/8lm7nR-xRqA" target="_blank" class="card"><img src="img/TR10.png"
+									alt=""></a>
+						</div>
+					</div>
+				</div>
+				<button role="button" id="flecha-derecha6" class="flecha-derecha6"><i
+						class="fas fa-angle-right"></i></button>
+			</div>
+		</div>
+
+
+		<div class="peliculas-recomendadas contenedor">
+			<div class="contenedor-titulo-controles">
+				<h3>Suspenso</h3>
+				<div class="indicadores7"></div>
+			</div>
+
+			<div class="contenedor-septimo">
+				<button role="button" id="flecha-izquierda7" class="flecha-izquierda7"><i
+						class="fas fa-angle-left"></i></button>
+
+				<div class="contenedor-suspenso">
+					<div class="suspenso">
+						<div class="pelicula7">
+							<a href="https://youtu.be/KNYPRt6SfrE" target="_blank" class="card"><img src="img/SP1.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula7">
+							<a href="https://youtu.be/Q6DSVZ-SEZE" target="_blank" class="card"><img src="img/SP2.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula7">
+							<a href="https://youtu.be/d7K7pkZJhe8" target="_blank" class="card"><img src="img/SP3.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula7">
+							<a href="https://youtu.be/BUaQeXslANg" target="_blank" class="card"><img src="img/SP4.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula7">
+							<a href="https://youtu.be/p810nChsCuE" target="_blank" class="card"><img src="img/SP5.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula7">
+							<a href="https://youtu.be/0l_uo7zRnLs" target="_blank" class="card"><img src="img/SP6.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula7">
+							<a href="https://youtu.be/a-H7v2W7K2I" target="_blank" class="card"><img src="img/SP7.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula7">
+							<a href="https://youtu.be/v7F6oTFc7Eg" target="_blank" class="card"><img src="img/SP8.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula7">
+							<a href="https://youtu.be/eLEwNo78f0k" target="_blank" class="card"><img src="img/SP9.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula7">
+							<a href="https://youtu.be/18fMBzX5PdA" target="_blank" class="card"><img src="img/SP10.png"
+									alt=""></a>
+						</div>
+					</div>
+				</div>
+				<button role="button" id="flecha-derecha7" class="flecha-derecha7"><i
+						class="fas fa-angle-right"></i></button>
+			</div>
+		</div>
+
+
+		<div class="peliculas-recomendadas contenedor">
+			<div class="contenedor-titulo-controles">
+				<h3>Comedia</h3>
+				<div class="indicadores8"></div>
+			</div>
+
+			<div class="contenedor-octavo">
+				<button role="button" id="flecha-izquierda8" class="flecha-izquierda8"><i
+						class="fas fa-angle-left"></i></button>
+
+				<div class="contenedor-comedia">
+					<div class="comedia">
+						<div class="pelicula8">
+							<a href="https://youtu.be/LJcVhteNnSY" target="_blank" class="card"><img src="img/CM1.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula8">
+							<a href="https://youtu.be/d_f-htgnr-M" target="_blank" class="card"><img src="img/CM2.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula8">
+							<a href="https://youtu.be/7AONoC1Lb_0" target="_blank" class="card"><img src="img/CM3.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula8">
+							<a href="https://youtu.be/wnNgGp1KVWQ" target="_blank" class="card"><img src="img/CM4.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula8">
+							<a href="https://youtu.be/8V11aiYk3wE" target="_blank" class="card"><img src="img/CM5.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula8">
+							<a href="https://youtu.be/R8HZeYfJnNU" target="_blank" class="card"><img src="img/CM6.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula8">
+							<a href="https://youtu.be/QWJX0u1Fa9U" target="_blank" class="card"><img src="img/CM7.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula8">
+							<a href="https://youtu.be/oDcq4GBOaTg" target="_blank" class="card"><img src="img/CM8.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula8">
+							<a href="https://youtu.be/m5uMC4CfxSY" target="_blank" class="card"><img src="img/CM9.png"
+									alt=""></a>
+						</div>
+						<div class="pelicula8">
+							<a href="https://youtu.be/9qVmiQckZpM" target="_blank" class="card"><img src="img/CM10.png"
+									alt=""></a>
+						</div>
+					</div>
+				</div>
+				<button role="button" id="flecha-derecha8" class="flecha-derecha8"><i
+						class="fas fa-angle-right"></i></button>
+			</div>
+		</div>
+	</main>
+
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="js/BuscadorPeliculas.js"></script>
+	<script src="js/MainPeliculas.js"></script>
+	<script src="js/filtro.js"></script>
+	<script src="js/js1.js"></script>
+	<script src="js/jquery-3.3.1.min.js"></script>
+</body>
+
+</html>
